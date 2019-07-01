@@ -1,8 +1,9 @@
-//Require express 
+//import express, mongoose, and routes. 
 import express from 'express';
 import mongoose from 'mongoose';
 import routes from './routes';
 
+//using mongoose to get models and business validation, pass in db string
 mongoose.connect('mongodb://localhost:27017/reddit', () =>{
     console.log('connected to mongodb...');
 });

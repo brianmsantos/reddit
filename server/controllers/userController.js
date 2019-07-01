@@ -7,12 +7,22 @@ userController.post = (req, res) => {
 
     //Validation
 
-    const user = new db.user({
+    const user = new db.User({
         username,
         password,
     });
 
-    user.save().then().catch
+    //save to collection,
+    user.save().then((newUser)=>{
+        res.status(200).json({
+          success: true,
+          data: newUser,
+        })
+    }).catch((err)=>{
+        res.status(500).json({
+          message: err,
+        });
+    });
 };
 
 export default userController;

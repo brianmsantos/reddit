@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-///way to define our model/data tables 
+//way to define our model/data tables/collection 
 const { Scehma } = mongoose;
 
 const userSchema = new Schema ({
@@ -18,6 +18,7 @@ const userSchema = new Schema ({
 
 //attach schema to our model 
 //write some encryption for password
-
+//1st parameter is the model, second parameter is the schema created
 const User = mongoose.model('User', userSchema)
+
 export default User;
