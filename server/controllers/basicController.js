@@ -1,3 +1,4 @@
+// This will handle our business logic.  Our initial route right here. 
 const basicController = {};
 
 basicController.get = (req, res) => {
