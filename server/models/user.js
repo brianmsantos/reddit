@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 //way to define our model/data tables/collection 
-const { Scehma } = mongoose;
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema ({
     username: {
